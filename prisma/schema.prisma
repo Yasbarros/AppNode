@@ -18,3 +18,12 @@ model User {
   name  String
   email String @unique
 }
+
+model Event {
+  id          Int      @id @default(autoincrement())
+  name        String
+  description String?
+  date        DateTime
+  location    String
+  createdAt   DateTime @default(now())
+}
